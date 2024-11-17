@@ -5,10 +5,6 @@
   "description": "This is the plugin template for LobeChat plugin development",
   "homepage": "https://github.com/lobehub/chat-plugin-template",
   "repository": "https://github.com/lobehub/chat-plugin-template.git",
-  "workspaces": [
-    "docs/*",
-    "./*"
-  ],
   "scripts": {
     "build": "next build",
     "ci": "npm run lint && npm run type-check",
@@ -23,6 +19,7 @@
     "prettier": "prettier -c --write \"**/**\"",
     "release": "semantic-release",
     "start": "next start",
+    "vercel-start": "vercel dev",
     "test": "vitest --passWithNoTests",
     "test:coverage": "vitest --coverage  --passWithNoTests",
     "type-check": "tsc --noEmit"
@@ -64,7 +61,8 @@
     "react": "^18",
     "react-dom": "^18",
     "react-layout-kit": "^1",
-    "xml2js": "^0.6.2"
+    "xml2js": "^0.6.2",
+    "dumi": "~2.2.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^18",
@@ -85,6 +83,7 @@
     "semantic-release": "^21",
     "stylelint": "^15",
     "typescript": "^5",
+    "vercel": "^39.0.2",
     "vitest": "latest"
   },
   "peerDependencies": {
