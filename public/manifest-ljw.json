@@ -1,0 +1,39 @@
+{
+  "$schema": "../node_modules/@lobehub/chat-plugin-sdk/schema.json",
+  "api": [
+    {
+      "url": "http://10.10.10.66:3000/api/arxiv",
+      "name": "arxiv",
+      "description": "查询论文",
+      "parameters": {
+        "properties": {
+          "query": {
+            "description": "条件",
+            "type": "string"
+          },
+          "maxResults": {
+            "type": "number",
+            "description": "查询条数"
+          }
+        },
+        "required": ["query"],
+        "type": "object"
+      }
+    }
+  ],
+  "author": "LobeHub",
+  "createdAt": "2023-09-03",
+  "homepage": "https://github.com/lobehub/chat-plugin-template",
+  "identifier": "plugin-identifier",
+  "meta": {
+    "avatar": "🚀",
+    "tags": ["template"],
+    "title": "Chat Plugin Template",
+    "description": "This is the plugin template for LobeChat plugin development"
+  },
+  "ui": {
+    "url": "http://10.10.10.66:3000",
+    "height": 200
+  },
+  "version": "1"
+}
