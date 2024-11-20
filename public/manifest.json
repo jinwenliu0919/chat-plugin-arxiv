@@ -1,0 +1,43 @@
+{
+  "$schema": "../node_modules/@lobehub/chat-plugin-sdk/schema.json",
+  "api": [
+      {
+          "url": "https://chat-plugin-arxiv.vercel.app/api/arxiv",
+          "name": "arxiv",
+          "description": "从arxiv搜索论文，并返回论文标题、作者、分类、发布时间、摘要和论文地址 ",
+          "parameters": {
+              "properties": {
+                  "query": {
+                      "description": "Search query for papers，If the user input is in a non-English language, it should be translated into English.",
+                      "type": "string"
+                  },
+                  "maxResults": {
+                      "type": "number",
+                      "description": "Maximum number of results to return"
+                  }
+              },
+              "required": [
+                  "query"
+              ],
+              "type": "object"
+          }
+      }
+  ],
+  "author": "AI智慧岛",
+  "createdAt": "2023-09-03",
+  "homepage": "https://github.com/lobehub/chat-plugin-template",
+  "identifier": "arxiv-assistant",
+  "meta": {
+      "avatar": "https://chatknow.lify.vip/discover/plugins/arxiv-assistant/apple-touch-icon.png",
+      "tags": [
+          "template"
+      ],
+      "title": "arxiv学术",
+      "description": "查询arxiv学术论文"
+  },
+  "ui": {
+      "url": "https://chat-plugin-arxiv.vercel.app",
+      "height": 200
+  },
+  "version": "1"
+}
